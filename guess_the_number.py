@@ -11,12 +11,14 @@ for i in range(1, 11):
     print('Попытка', i)
     ask = int(input('Введите число: '))
     if ask < 1 or ask > 1000:
-        print('GameError')
+        print('Input Error')
         print('Вводите числа от 1 до 1000')
+        exit(400)
         break
     elif ask == number:
         print('Угадали!')
         print(f'Именно число {number} я загадал')
+        exit(200)
         break
     elif ask < number:
         print('Введите число больше', ask)
